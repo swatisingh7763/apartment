@@ -12,8 +12,7 @@ public class Blocks {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    private int societyId;
-    @OneToMany(fetch = FetchType.LAZY)
+    private String blockName;
+    @OneToMany(targetEntity = Apartment.class)
     private List<Apartment> apartmentList;
-
 }

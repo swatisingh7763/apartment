@@ -13,6 +13,9 @@ public class Apartment {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
-    @OneToMany(fetch = FetchType.LAZY)
+    private String type;
+    private Long cost;
+    @OneToMany(targetEntity = Address.class)
+
     private List<Address> addressList;
 }
