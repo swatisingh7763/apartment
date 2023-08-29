@@ -11,11 +11,10 @@ import java.util.List;
 public class Apartment {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Integer id;
     private String name;
     private String type;
     private Long cost;
     @OneToMany(targetEntity = Address.class)
-
     private List<Address> addressList;
 }
