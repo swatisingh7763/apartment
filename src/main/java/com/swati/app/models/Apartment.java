@@ -15,6 +15,6 @@ public class Apartment {
     private String name;
     private String type;
     private Long cost;
-    @OneToMany(targetEntity = Address.class)
+    @ManyToMany(targetEntity = Address.class)
     private List<Address> addressList;
 }
